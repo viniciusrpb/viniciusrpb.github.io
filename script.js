@@ -2,6 +2,28 @@
 
 /* Generated with Artisteer version 2.2.0.17981, file checksum is A9B5EF42. */
 
+.img-swap {
+  position: relative;
+  display: inline-block; /* mantém o tamanho da imagem padrão */
+}
+
+/* garante bloco e responsividade */
+.img-swap img {
+  display: block;
+}
+
+/* a imagem de hover fica por cima e escondida */
+.img-swap .img-hover {
+  position: absolute;
+  inset: 0;           /* equivale a top:0; right:0; bottom:0; left:0 */
+  opacity: 0;         /* escondida por padrão */
+  transition: opacity 0.25s ease;
+}
+
+/* ao passar o mouse, mostra a de cima e esconde a de baixo */
+.img-swap:hover .img-hover { opacity: 1; }
+.img-swap:hover .img-default { opacity: 0; }
+
 var artEventHelper = {
 	'bind': function(obj, evt, fn) {
 		if (obj.addEventListener)

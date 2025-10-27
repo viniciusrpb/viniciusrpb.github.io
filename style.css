@@ -2,6 +2,41 @@
 
 /* Generated with Artisteer version 2.2.0.17981, file checksum is A1775081. */
 
+
+.img-swap {
+  position: relative;
+  display: inline-block;
+  float: left;            /* faz o bloco flutuar à esquerda */
+  width: 258px;           /* mesma largura da imagem */
+  height: 277px;          /* mesma altura da imagem */
+  margin: 0 15px 10px 0;  /* espaço entre imagem e texto */
+}
+
+/* ambas as imagens ficam empilhadas uma sobre a outra */
+.img-swap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 258px;
+  height: 277px;
+  display: block;
+}
+
+/* imagem do hover inicialmente invisível */
+.img-swap .img-hover {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+/* ao passar o mouse, troca suavemente */
+.img-swap:hover .img-hover {
+  opacity: 1;
+}
+
+.img-swap:hover .img-default {
+  opacity: 0;
+}
+
 body
 {
 	margin: 0 auto;
